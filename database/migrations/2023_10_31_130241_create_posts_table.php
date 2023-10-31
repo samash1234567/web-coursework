@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('postcontent');
             $table->timestamps();
 
-            $table->foreign('userid')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); //both one to many relationship
-            $table->foreign('threadid')->references('id')->on('threads')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+
+            //would i have the postid here?
         });
     }
 

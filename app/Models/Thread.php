@@ -9,19 +9,12 @@ class Thread extends Model
 {
     use HasFactory;
 
-
-    public function users() {
-        return $this->belongsTo(User::class);
-    }
-
     public function categories() {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 
     public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->HasMany(Post::class);
     }
-
-
 
 }

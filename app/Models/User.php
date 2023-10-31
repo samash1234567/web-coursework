@@ -9,12 +9,7 @@ class User extends Model
 {
     use HasFactory;
 
-
     public function posts() {
         return $this->hasMany(Post::class);
-    }
-
-    public function threads() {
-        return $this->hasMany(Thread::class);
     }
 }

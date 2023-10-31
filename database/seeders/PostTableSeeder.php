@@ -30,6 +30,6 @@ class PostTableSeeder extends Seeder
 
         $p3->save();
 
-
+        Post::factory()->count(50)->create();
     }
 }

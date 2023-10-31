@@ -15,16 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('content');
-            //add userid and categoryid
             $table->timestamps();
 
-            $table->foreign('categoryid')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('userid')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('postid')->references('id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
+
 
         });
     }
 
+    //User makes a post, then they specify different options: specify the category, thread is off that
     /**
      * Reverse the migrations.
      */

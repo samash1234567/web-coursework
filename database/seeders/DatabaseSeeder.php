@@ -21,13 +21,14 @@ class DatabaseSeeder extends Seeder
 
         //call seeders here (if no data then check this)
 
-        $this->call(CategoryTableSeeder::class);
-
         $this->call(UserTableSeeder::class);
+
+        $this->call(PostTableSeeder::class);
 
         $this->call(ThreadTableSeeder::class);
 
-        $this->call(PostTableSeeder::class);
+        $this->call(CategoryTableSeeder::class);
+
 
 
 

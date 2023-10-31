@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('password');
             $table->timestamps();
 
-            $table->foreign('threadid')->references('id')->on('threads')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('postid')->references('id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreign('postid')->references('id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
 
         });
     }
