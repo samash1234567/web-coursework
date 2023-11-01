@@ -18,6 +18,7 @@ class PostFactory extends Factory
     {
         return [
             'postcontent' => fake()->sentence(),
+            'user_id'=> fake()->numberBetween(1,5),
         ];
     }
 }

@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Post;
+
 class UserTableSeeder extends Seeder
 {
     /**
@@ -34,8 +36,9 @@ class UserTableSeeder extends Seeder
 
         $user3->save();
 
-
-        User::factory()->count(50)->create();
+        $user = User::factory()
+        ->has(Post::factory()->count(3), 'posts')
+        ->create();
 
     }
 }

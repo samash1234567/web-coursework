@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\Category;
+use App\Models\Thread;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +20,9 @@ class CategoryFactory extends Factory
         return [
             'name' => fake()->name(),
             'catdescription'=> fake()->sentence(),
+            $category = Category::factory()
+            ->has(Thread::factory()->count(10))
+            ->create();
         ];
     }
 }

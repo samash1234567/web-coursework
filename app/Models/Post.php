@@ -10,11 +10,7 @@ class Post extends Model
     use HasFactory;
 
 public function user() { //change this
-    return $this->hasOne(User::class);
-}
-
-public function thread() {
-    return $this->hasOne(Thread::class);
+    return $this->belongsTo(User::class);
 }
 
 }
