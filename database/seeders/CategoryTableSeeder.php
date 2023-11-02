@@ -33,12 +33,12 @@ class CategoryTableSeeder extends Seeder
         $c3->threads()->attach(1);
         $c3->save();
 
-        $cat = Category::factory()
-        ->hasAttached(
-            Thread::factory()->count(3),
-            ['active' => true]
-        )
-        ->create();
+        
+        Category::factory()->count(50)->create();
+
+
+        //seed the cat_threadfactory here
+
 
     }
 }

@@ -20,9 +20,9 @@ class CategoryFactory extends Factory
         return [
             'name' => fake()->name(),
             'catdescription'=> fake()->sentence(),
-            $category = Category::factory()
-            ->has(Thread::factory()->count(10))
-            ->create();
+            // create a factory (category_threadfactory) with this and category thread
+            //'thread_id'=> \App\Models\Thread::inRandomOrder()->first()->id,
+            //'category_id'=> \App\Models\Category::inRandomOrder()->first()->id,
         ];
     }
 }

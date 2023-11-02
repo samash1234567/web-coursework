@@ -18,7 +18,8 @@ class PostFactory extends Factory
     {
         return [
             'postcontent' => fake()->sentence(),
-            'user_id'=> fake()->numberBetween(1,5),
+            'user_id'=> \App\Models\User::inRandomOrder()->first()->id,
+            'thread_id'=> \App\Models\User::inRandomOrder()->first()->id,
         ];
     }
 }

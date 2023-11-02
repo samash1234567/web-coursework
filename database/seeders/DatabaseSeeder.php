@@ -23,11 +23,15 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserTableSeeder::class);
 
-        $this->call(PostTableSeeder::class);
-
         $this->call(ThreadTableSeeder::class);
 
         $this->call(CategoryTableSeeder::class);
+
+        $this->call(PostTableSeeder::class);
+
+        //call the cat_thread factory here
+
+      
 
 
 

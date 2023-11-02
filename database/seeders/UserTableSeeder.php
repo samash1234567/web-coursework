@@ -36,9 +36,7 @@ class UserTableSeeder extends Seeder
 
         $user3->save();
 
-        $user = User::factory()
-        ->has(Post::factory()->count(3), 'posts')
-        ->create();
+        User::factory()->count(50)->create();
 
     }
 }

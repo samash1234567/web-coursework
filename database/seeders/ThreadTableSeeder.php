@@ -33,12 +33,10 @@ class ThreadTableSeeder extends Seeder
         $t3->categories()->attach(3);
         $t3->save();
 
-        $thread = Thread::factory()
-        ->hasAttached(
-            Category::factory()->count(3),
-            ['active' => true]
-        )
-        ->create();
+        Thread::factory()->count(50)->create();
+
+
+        //seed the cat_thread factory here
 
 
 

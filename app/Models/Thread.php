@@ -13,4 +13,10 @@ class Thread extends Model
         return $this->belongsToMany(Category::class);
     }
 
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+
+
+
 }

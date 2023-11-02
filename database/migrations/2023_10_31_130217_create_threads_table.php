@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('content');
             $table->timestamps();
 
+            //many is where u reference
 
         });
     }
