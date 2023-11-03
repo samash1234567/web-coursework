@@ -27,21 +27,17 @@ class PostTableSeeder extends Seeder
         $p2 = new Post;
         $p2->postcontent= "wow post 2 content";
         $p2->user_id= 3;
-        $p2->thread_id=4;
+        $p2->thread_id= 4;
         $p2->save();
 
         $p3 = new Post;
         $p3->postcontent= "again good content for this third post";
         $p3->user_id= 5;
-        $p3->thread_id=6;
+        $p3->thread_id= 6;
         $p3->save();
 
 
         Post::factory()->count(50)->create();
 
-        // $post = Post::factory()
-        // ->has(User::factory()->count(3))
-        // ->has(Thread::factory()->count(3))
-        // ->create();
     }
 }

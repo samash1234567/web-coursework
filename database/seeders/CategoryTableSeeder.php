@@ -40,7 +40,7 @@ class CategoryTableSeeder extends Seeder
         Category::factory()->count(50)->create();
 
         $cat = Category::factory()
-             ->has(Thread::factory()->count(3))
+             ->has(Thread::factory()->count(10))
              ->create();
 
 

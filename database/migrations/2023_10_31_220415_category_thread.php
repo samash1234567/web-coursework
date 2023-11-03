@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('category_thread', function (Blueprint $table) {//change migration name to category_thread
+        Schema::create('category_thread', function (Blueprint $table) {
             $table->primary(['thread_id','category_id']);
             $table->bigInteger('category_id')->unsigned();
             $table->bigInteger('thread_id')->unsigned();

@@ -17,12 +17,10 @@ return new class extends Migration
             $table->string('content');
             $table->timestamps();
 
-            //many is where u reference
 
         });
     }
 
-    //User makes a post, then they specify different options: specify the category, thread is off that
     /**
      * Reverse the migrations.
      */
