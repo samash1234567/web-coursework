@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use App\Models\Category;
+use App\Models\Thread;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class PostFactory extends Factory
+class CategoryThreadFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +18,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'postcontent' => fake()->sentence(),
-            'user_id'=> \App\Models\User::inRandomOrder()->first()->id,
+            'category_id'=> \App\Models\Category::inRandomOrder()->first()->id,
             'thread_id'=> \App\Models\Thread::inRandomOrder()->first()->id,
         ];
     }
