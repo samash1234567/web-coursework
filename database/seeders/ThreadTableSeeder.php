@@ -20,6 +20,7 @@ class ThreadTableSeeder extends Seeder
         $t1->content= "this is new";
         $t1->save();
 
+
         $t2 = new Thread;
         $t2->title= "whats old?";
         $t2->content= "this is old";
