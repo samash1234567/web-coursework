@@ -18,6 +18,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call(CategoryTableSeeder::class);
 
+        //make a CategoryThreadSeeder and call it here -> 
+        /**
+         * Make a category and thread (additionally have the attach method)
+         * Make sure to use the model and the factories (using the use at the top)
+         */
+
         $this->call(PostTableSeeder::class);
 
     }
