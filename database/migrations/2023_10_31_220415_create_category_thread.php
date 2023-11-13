@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('category_thread', function (Blueprint $table) {
-            $table->primary(['thread_id','category_id']);
+            $table->primary(['category_id','thread_id']);
             $table->bigInteger('category_id')->unsigned();
             $table->bigInteger('thread_id')->unsigned();
             $table->timestamps();
