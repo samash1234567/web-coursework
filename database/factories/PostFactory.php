@@ -17,7 +17,8 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'postcontent' => fake()->sentence(),
+            'post_title' => fake()->sentence(),
+            'post_content' => fake()->sentence(),
             'user_id'=> \App\Models\User::inRandomOrder()->first()->id,
             'thread_id'=> \App\Models\Thread::inRandomOrder()->first()->id,
         ];

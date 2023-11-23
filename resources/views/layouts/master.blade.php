@@ -9,13 +9,40 @@
 </head>
 <body>
 
-
-
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">Register</a></li>
     </ul>
+
+    @if ($errors->any())
+        <div>
+
+            Errors:
+
+            <ul>
+
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+
+
+            </ul>
+
+        </div>
+    @endif
+
+    @if (session('message'))
+
+        <p><b>{{ session('message')}}</b></p>
+        
+    @endif
+
+    <div>
+    @yield('content')
+    </div>
+
+
 
 
 
