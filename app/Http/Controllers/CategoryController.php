@@ -32,28 +32,30 @@ class CategoryController extends Controller
     {
         $validatedData = $request->validate([
 
-            'title' => 'required|max:50',
-            'content' => 'required|max:150',
+            'name' => 'required|max:50',
+            'catdescription' => 'required|max:150',
         ]);
 
-        $t = new Thread;
+        $c = new Category;
 
-        $t->title = $validatedData['title'];
-        $t->content = $validatedData['content'];
-        $t->save();
+        $c->name = $validatedData['name'];
+        $c->catdescription = $validatedData['catdescription'];
+        $c->save();
 
 
-        session()->flash('message', 'Thread has successfully been created');
+        session()->flash('message', 'Category has successfully been created');
 
-        return redirect()->route('threads.index');
+        return redirect()->route('categories.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $category = Category::findOrFail($id);
+
+        return view('categories.show', ['category' => $category]);
     }
 
     /**
@@ -75,8 +77,12 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+
+        $category->delete();
+
+        return redirect()->route('categories.index')->with('message', 'Category has been deleted.');
     }
 }

@@ -33,7 +33,9 @@ Route::get('/posts/create',[PostController::class, 'create'])->name('posts.creat
 
 Route::post('/posts',[PostController::class, 'store'])->name('posts.store');
 
-Route::get('/post/{id}',[PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{id}',[PostController::class, 'show'])->name('posts.show');
+
+Route::delete('/posts/{id}',[PostController::class, 'destroy'])->name('posts.destroy');
 
 
 Route::get('/threads',[ThreadController::class, 'index'])->name('threads.index');
@@ -44,6 +46,8 @@ Route::post('/threads',[ThreadController::class, 'store'])->name('threads.store'
 
 Route::get('/threads/{id}',[ThreadController::class, 'show'])->name('threads.show');
 
+Route::delete('/threads/{id}',[ThreadController::class, 'destroy'])->name('threads.destroy');
+
 
 Route::get('/categories',[CategoryController::class, 'index'])->name('categories.index');
 
@@ -53,6 +57,7 @@ Route::post('/categories',[CategoryController::class, 'store'])->name('categorie
 
 Route::get('/categories/{id}',[CategoryController::class, 'show'])->name('categories.show');
 
+Route::delete('/categories/{id}',[CategoryController::class, 'destroy'])->name('categories.destroy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

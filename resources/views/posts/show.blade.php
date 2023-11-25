@@ -9,4 +9,17 @@
         <li>Post Content: {{$post->post_content}}</li>
         <li>Thread Content: {{$post->thread->content}}</li>
     </ul>
+
+<form method="POST" action="{{ route('posts.destroy', ['id' => $post->id]) }}">
+
+    @csrf
+
+    @method('DELETE')
+
+    <button type="submit">Delete Post</button>
+
+</form>
+
+
+
 @endsection

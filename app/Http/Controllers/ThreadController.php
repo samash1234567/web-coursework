@@ -77,8 +77,12 @@ class ThreadController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $thread = Thread::findOrFail($id);
+
+        $thread->delete();
+
+        return redirect()->route('threads.index')->with('message', 'Thread has been deleted.');
     }
 }
