@@ -32,10 +32,10 @@ class ThreadTableSeeder extends Seeder
         $t3->content= "this is happening right now";
         $t3->save();
 
-        Thread::factory()->count(50)->create();
+        Thread::factory()->count(17)->create();
 
         $thread = Thread::factory()
-        ->has(Category::factory()->count(3))
+        ->has(Category::factory()->count(10))
         ->create();
 
     }

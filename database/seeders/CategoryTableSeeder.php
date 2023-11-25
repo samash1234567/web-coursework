@@ -31,7 +31,7 @@ class CategoryTableSeeder extends Seeder
         $c3->save();
 
 
-        Category::factory()->count(50)->create();
+        Category::factory()->count(17)->create();
 
         $cat = Category::factory()
              ->has(Thread::factory()->count(10))

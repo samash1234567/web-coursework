@@ -36,7 +36,7 @@ class UserTableSeeder extends Seeder
         $user3->date_of_birth= "2006-05-12";
         $user3->save();
 
-        User::factory()->count(50)->create();
+        User::factory()->count(17)->create();
 
     }
 }
