@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +44,14 @@ Route::post('/threads',[ThreadController::class, 'store'])->name('threads.store'
 
 Route::get('/threads/{id}',[ThreadController::class, 'show'])->name('threads.show');
 
+
+Route::get('/categories',[CategoryController::class, 'index'])->name('categories.index');
+
+Route::get('/categories/create',[CategoryController::class, 'create'])->name('categories.create');
+
+Route::post('/categories',[CategoryController::class, 'store'])->name('categories.store');
+
+Route::get('/categories/{id}',[CategoryController::class, 'show'])->name('categories.show');
 
 
 Route::get('/dashboard', function () {

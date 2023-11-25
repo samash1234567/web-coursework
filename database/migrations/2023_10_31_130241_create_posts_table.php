@@ -21,11 +21,6 @@ return new class extends Migration
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('thread_id')->references('id')->on('threads')->onDelete('cascade')->onUpdate('cascade');
-            //belongs to a thread: do the relationships for these
-            //One Thread Many Posts in thread
-
-            //a user can create many posts
-
 
         });
     }

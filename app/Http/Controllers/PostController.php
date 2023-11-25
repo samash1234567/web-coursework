@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
-
+use App\Models\User;
+use App\Models\Thread;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -22,7 +23,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $users = User::orderBy('name','asc')->get();
+        $threads = Thread::orderBy('title','asc')->get();
+        return view('posts.create', ['users' => $users], ['threads' => $threads]);
     }
 
     /**
