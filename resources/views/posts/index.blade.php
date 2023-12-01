@@ -1,19 +1,18 @@
-@extends('layouts.master')
+@extends('layouts.index')
 
 @section('title', 'Current Post')
 
 
 @section('content')
 
-<p>All Posts inside the Thread Pages:</p>
-    <ul>
+<p class="display-posts">All Posts inside the Thread Pages:</p>
+    <ul class="flexbox-container">
         @foreach ($posts as $post)
-specify IDs or classes for CSS!
             <li><a href="{{ route('posts.show', ['id' => $post->id])}}">{{$post->post_title}}</a></li>
         @endforeach
     </ul>
 
-    <a href="{{ route('posts.create')}}">Create Post</a>
+    <a href="{{ route('posts.create')}}">Create a Post</a>
 
 
 
