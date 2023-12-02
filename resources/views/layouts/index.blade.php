@@ -32,7 +32,7 @@
 
     @if (session('message'))
 
-        <p><b>{{ session('message')}}</b></p>
+        <p class="display-session"><b>{{ session('message')}}</b></p>
 
     @endif
 

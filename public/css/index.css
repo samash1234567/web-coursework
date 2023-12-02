@@ -21,8 +21,8 @@
 .navbar-items {
     display: inline;
     float: left;
-    border-right: 1px solid #fafafa;
-    border-left: 1px solid #fcfafa;
+    border-right: 2px solid #fafafa;
+    border-left: 2px solid #fcfafa;
 }
 
 .navbar-anchor {
@@ -31,7 +31,7 @@
     display: block;
     text-align: center;
     padding: 10px 14px;
-    font-size: 22px;
+    font-size: 45px;
     text-decoration: none;
 
 }
@@ -101,7 +101,7 @@ li a {
     background-color: rgb(11, 11, 11);
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size: 55px;
     margin: 0;
     border-style: solid;
     font-weight: bolder;
@@ -109,3 +109,39 @@ li a {
     border-color: rgb(1, 2, 1);
     border-radius: 10px;
 }
+
+
+.display-create {
+    display: inline-block;
+    background-color: white;
+    color: rgb(174, 183, 6);
+    margin: 10px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 700px;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bolder;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.display-create:hover {
+    background-color: #3d2004;
+    color: rgb(255, 255, 255);
+}
+
+
+.display-session {
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.multi-items {
+
+    margin: 20px 20px 20px 20px;
+    border-bottom: 8px solid blue;
+}
+

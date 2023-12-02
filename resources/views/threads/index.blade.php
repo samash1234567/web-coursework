@@ -1,18 +1,21 @@
-@extends('layouts.master')
+@extends('layouts.index')
 
-@section('title', 'Current Thread')
+@section('title-page', 'Threads')
 
 
 @section('content')
 
-<p>All Threads inside the Forum Page:</p>
+<p class="display-posts">All Threads inside the Forum Page:</p>
+
+<a class="display-create" href="{{ route('threads.create')}}">Create a Thread</a>
+
 <ul>
     @foreach ($threads as $thread)
-        <li>{{$thread->title}}</li>
-        <li>{{$thread->content}}</li>
+        <div class="multi-items">
+            <li><a href="{{ route('threads.show', ['id' => $thread->id])}}">{{$thread->title}}</a></li>
+            <li><a href="{{ route('threads.show', ['id' => $thread->id])}}">{{$thread->content}}</a></li>
+            </div>
     @endforeach
 </ul>
-
-<a href="{{ route('threads.create')}}">Create Thread</a>
 
 @endsection
